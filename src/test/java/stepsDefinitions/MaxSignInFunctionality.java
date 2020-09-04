@@ -149,7 +149,7 @@ public class MaxSignInFunctionality extends BaseStep {	Properties common;
 	
 	@Then("^User should be able to SignIn Successfully$")
 	public void user_should_be_able_to_SignIn_Successfully() throws Throwable {
-	    //System.out.println(msip.getInvalidPassEmailMsg());	
+	    System.out.println(msip.getInvalidPassEmailMsg());	
 	    Assert.assertEquals(mhp.getMsg(), "Hi, Debasmita");
 	}
 	
