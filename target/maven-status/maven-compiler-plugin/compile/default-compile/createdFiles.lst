@@ -1,0 +1,6 @@
+utilities\DriverFactory.class
+pageobjects\MaxHomePage.class
+pageobjects\BasePage.class
+pageobjects\MaxSignInPage.class
+utilities\ExtentManager.class
+utilities\ReportTestManager.class
