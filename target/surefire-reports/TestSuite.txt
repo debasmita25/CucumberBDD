@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 126.286 sec <<< FAILURE! - in TestSuite
-runScenario(runners.TestRunner)  Time elapsed: 111.102 sec  <<< FAILURE!
+Tests run: 12, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 149.896 sec <<< FAILURE! - in TestSuite
+runScenario(runners.TestRunnerFirefox)  Time elapsed: 36.542 sec  <<< FAILURE!
 org.openqa.selenium.NoSuchElementException: Timed out after 10 seconds. Unable to locate the element
 	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.findElement(AjaxElementLocator.java:91)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
@@ -10,15 +10,14 @@ org.openqa.selenium.NoSuchElementException: Timed out after 10 seconds. Unable t
 	at pageobjects.BasePage.getMessage(BasePage.java:142)
 	at pageobjects.MaxHomePage.getMsg(MaxHomePage.java:54)
 	at stepsDefinitions.MaxSignInFunctionality.user_should_be_able_to_SignIn_Successfully(MaxSignInFunctionality.java:153)
-	at ?.User should be able to SignIn Successfully(file:src/test/resources/features/Max-SignIn.feature:22)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[@class='MuiButton-label']//div[text()][@data-cs-mask='true']"}
-  (Session info: chrome=85.0.4183.83)
+	at ?.User should be able to SignIn Successfully(file:src/test/resources/features/Max-SignInFirefox.feature:15)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //span[@class='MuiButton-label']//div[text()][@data-cs-mask='true']
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
 System info: host: 'DESKTOP-5ESQ5SM', ip: '192.168.0.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.83, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\DEBASM~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52064}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 2a2a4a121203ceba5abac10e3a04d278
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 78.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200708170202, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 16000, moz:profile: C:\Users\Debasmita Biswas\A..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 179e3e98-baa3-46bd-a248-b0f598490fbf
 *** Element info: {Using=xpath, value=//span[@class='MuiButton-label']//div[text()][@data-cs-mask='true']}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -76,7 +75,7 @@ Session ID: 2a2a4a121203ceba5abac10e3a04d278
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 
-runScenario(runners.TestRunnerFirefox)  Time elapsed: 124.166 sec  <<< FAILURE!
+runScenario(runners.TestRunner)  Time elapsed: 40.612 sec  <<< FAILURE!
 org.openqa.selenium.NoSuchElementException: Timed out after 10 seconds. Unable to locate the element
 	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.findElement(AjaxElementLocator.java:91)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
@@ -84,14 +83,15 @@ org.openqa.selenium.NoSuchElementException: Timed out after 10 seconds. Unable t
 	at pageobjects.BasePage.getMessage(BasePage.java:142)
 	at pageobjects.MaxHomePage.getMsg(MaxHomePage.java:54)
 	at stepsDefinitions.MaxSignInFunctionality.user_should_be_able_to_SignIn_Successfully(MaxSignInFunctionality.java:153)
-	at ?.User should be able to SignIn Successfully(file:src/test/resources/features/Max-SignInFirefox.feature:15)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //span[@class='MuiButton-label']//div[text()][@data-cs-mask='true']
+	at ?.User should be able to SignIn Successfully(file:src/test/resources/features/Max-SignIn.feature:13)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[@class='MuiButton-label']//div[text()][@data-cs-mask='true']"}
+  (Session info: chrome=85.0.4183.83)
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
 System info: host: 'DESKTOP-5ESQ5SM', ip: '192.168.0.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 78.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200708170202, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 28832, moz:profile: C:\Users\Debasmita Biswas\A..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 4755098d-a0a4-439d-8324-22848ac45a00
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.83, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\DEBASM~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55758}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 54ab689be6a30af09e81fe15b4593ed4
 *** Element info: {Using=xpath, value=//span[@class='MuiButton-label']//div[text()][@data-cs-mask='true']}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)

@@ -1,6 +1,8 @@
  package stepsDefinitions;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -9,9 +11,11 @@ import java.util.Base64;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.TakesScreenshot;
@@ -27,9 +31,15 @@ import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter;
 
+import io.cucumber.core.api.Scenario;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import utilities.DriverFactory;
+import utilities.ExtentManager;
 import utilities.ReportTestManager;
 
 
@@ -38,9 +48,10 @@ public class BaseStep {
 	
 	private WebDriver driver=null;
 	private static ThreadLocal<DesiredCapabilities> dc = new ThreadLocal<DesiredCapabilities>();
-	String screenshotdir = System.getProperty("user.dir") + "/target/Screenshots/";
 	
 	
+	
+
 	public synchronized void getBrowser(String name,String grid) {
 
 		if (grid.equalsIgnoreCase("true")) {
@@ -174,19 +185,18 @@ public class BaseStep {
 		}
 	}
 	
-	public String getBase64Screenshot(WebDriver driver) throws IOException {
-	    String Base64StringofScreenshot="";
-	    File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-	    // for saving screenshots in local - this is optional 
-	    Date oDate = new Date();
-	    SimpleDateFormat oSDF = new SimpleDateFormat("ddMMYYYY_HHmmss");
-	    String sDate = oSDF.format(oDate);
-	    FileUtils.copyFile(src, new File(screenshotdir + "Screenshot_" + sDate + ".png"));
-	    //
-	    byte[] fileContent = FileUtils.readFileToByteArray(src);
-	    Base64StringofScreenshot = "data:image/png;base64," + Base64.getEncoder().encodeToString(fileContent);
-	    return Base64StringofScreenshot;
-	}
+	/*
+	 * public String getBase64Screenshot(WebDriver driver) throws IOException {
+	 * String Base64StringofScreenshot=""; File src = ((TakesScreenshot)
+	 * driver).getScreenshotAs(OutputType.FILE); // for saving screenshots in local
+	 * - this is optional Date oDate = new Date(); SimpleDateFormat oSDF = new
+	 * SimpleDateFormat("ddMMYYYY_HHmmss"); String sDate = oSDF.format(oDate);
+	 * FileUtils.copyFile(src, new File(screenshotdir + "Screenshot_" + sDate +
+	 * ".png")); // byte[] fileContent = FileUtils.readFileToByteArray(src);
+	 * Base64StringofScreenshot = "data:image/png;base64," +
+	 * Base64.getEncoder().encodeToString(fileContent); return
+	 * Base64StringofScreenshot; }
+	 */
 
 
 }

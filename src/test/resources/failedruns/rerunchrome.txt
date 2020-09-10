@@ -1,0 +1,3 @@
+file:src/test/resources/features/Max-SignIn.feature:17
+file:src/test/resources/features/rough.feature:6
+file:src/test/resources/features/Max-SignInFirefox.feature:11

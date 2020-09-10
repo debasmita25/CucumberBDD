@@ -1,7 +1,5 @@
 runners\FailureRunner.class
-runners\TestRunnerFirefox.class
 roughSteps\RoughSteps.class
-runners\TestRunner.class
 stepsDefinitions\MaxSignInFunctionality.class
 runners\RoughRunner.class
 stepsDefinitions\BaseStep.class
